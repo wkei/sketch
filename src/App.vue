@@ -9,7 +9,7 @@
     <Preview ref="previewRef">
       <div class="mask" v-show="moving"></div>
     </Preview>
-    <div id="tips" class="transition" :style="tipsStyle" v-show="!hasProject">
+    <div id="tips" :class="{transition: !moving}" :style="tipsStyle" v-show="!hasProject">
       <ul>
         <li><b>⌃ + /</b> to toggle sidebar</li>
         <li><b v-if="dev">⌃ + K</b><b v-else>⌃ + N</b> to create a new project</li>
@@ -91,8 +91,8 @@ export default {
       let clickX = e.clientX
       let currW = this.width[target]
       let otherWidth = this.width[target === 'editorWrapper' ? 'projectList' : 'editorWrapper']
-      this.moving = true
       window.onmousemove = (e) => {
+        this.moving = true
         let moveX = e.clientX - clickX
         if (currW + moveX < this.minWidth) {
           this.width[target] = this.minWidth

@@ -106,6 +106,7 @@ export default {
   .inputarea {
     flex: 1;
     height: 100%;
+    overflow: hidden;
   }
   .CodeMirror {
     height: 100%;
@@ -151,6 +152,6 @@ export default {
 }
 
 .editor-html, .editor-style {
-  border-bottom: 2px solid rgba(45, 59, 66, .7);
+border-bottom: 2px solid $projectListBg;
 }
 </style>

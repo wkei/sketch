@@ -1,11 +1,11 @@
 <template>
   <div id="project-list">
-    <h1 class="logo">&lt;SketchCode/&gt;</h1>
+  <h1 class="logo">&lt;Sketch/&gt;</h1>
     <div class="list">
       <div class="inner">
         <ProjectName
           v-for="project in sortedProjects"
-          :key="project"
+          :key="project.name"
           :project="project"
           :active="project.id === currentProjectId">
         </ProjectName>
@@ -51,6 +51,7 @@ export default {
   background: $projectListBg;
   cursor: default;
   transform-origin: 0 0;
+  transition: none;
   .logo {
     padding: 15px 20px;
     margin: 0;
