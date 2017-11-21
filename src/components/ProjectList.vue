@@ -1,6 +1,6 @@
 <template>
   <div id="project-list">
-  <h1 class="logo">&lt;Sketch/&gt;</h1>
+    <h1 class="logo">&lt;Sketch/&gt;</h1>
     <div class="list">
       <div class="inner">
         <ProjectName

@@ -12,7 +12,7 @@
     <div id="tips" :class="{transition: !moving}" :style="tipsStyle" v-show="!hasProject">
       <ul>
         <li><b>⌃ + /</b> to toggle sidebar</li>
-        <li><b v-if="dev">⌃ + K</b><b v-else>⌃ + N</b> to create a new project</li>
+        <li><b v-if="dev">⌃ + N</b><b v-else>⌃ + N</b> to create a new project</li>
         <li><b>⌃ + Del</b> to delete current project</li>
         <li><b>Double Click</b> project title to rename</li>
       </ul>
@@ -159,15 +159,11 @@ export default {
 
 <style>
 @import './styles/share';
-* {
-  box-sizing: border-box;
-  -webkit-user-select: none;
+body {
   user-select: none;
 }
-// for safari
-input, textarea {
-  -webkit-user-select: text;
-  user-select: text;
+*, *:before, *:after {
+  box-sizing: border-box;
 }
 .transition {
   transition: all .2s ease-in-out;
