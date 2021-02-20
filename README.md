@@ -1,6 +1,6 @@
 # Sketch
 
-https://keipixel.com/sketch
+https://sketch.js.org
 
 [Progressive Web App](https://developer.mozilla.org/en-US/Apps/Progressive) version of [SketchCode](https://github.com/keiww/sketchcode)
 
